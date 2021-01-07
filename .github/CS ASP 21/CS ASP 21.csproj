@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>CS_ASP_21</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="pexels-quintin-gellar-2199293.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pexels-quintin-gellar-2199293.jpg" />
+  </ItemGroup>
+
+</Project>
