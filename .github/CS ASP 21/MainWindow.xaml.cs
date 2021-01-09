@@ -33,11 +33,11 @@ namespace CS_ASP_21
 
             string resultname = string.Format(" Driver - {0} ", textBoxName.Text);
 
-            int ss = int.Parse(textBoxSS.Text);
+            double ss = double.Parse(textBoxSS.Text);
 
             string resultSS = string.Format(" Social Security Numer # {0 : 000-00-0000} ", ss);
 
-            int phone = int.Parse(textBoxPhone.Text);
+            double phone = double.Parse(textBoxPhone.Text);
 
             string resultPhone = string.Format(" Phone Number : {0 : (000)000-0000} ", phone);
            
