@@ -40,6 +40,9 @@ namespace CS_ASP_21
             int phone = int.Parse(textBoxPhone.Text);
 
             string resultPhone = string.Format(" Phone Number : {0 : (000)000-0000} ", phone);
+           
+            
+
             //Format Driver Info
 
             labelName.Content = resultname;
@@ -50,12 +53,29 @@ namespace CS_ASP_21
 
 
             //Get Total Days
-            //Get Days Off
-            //Get Total Miles
-            //Get Total Pay
-       
 
-           
+            int days = Convert.ToInt32((calenderLeft.SelectedDate.Value - calenderReturn.SelectedDate.Value).Days);
+
+            labelDaysOut.Content = $"Days Out: {days}";
+
+            //Get Total Miles
+
+            int miles = Convert.ToInt32(textBoxEnd.Text) - Convert.ToInt32(textBoxStart.Text);
+
+            labelTotalMiles.Content = $" Total Miles: {miles}";
+
+            //Get Total Pay
+
+            double pay = (checkBoxRef.IsChecked == true) ? miles * .37 : miles * .27;
+
+            labelPayDue.Content = string.Format(" Pay Due: {0:c}", pay);
+
+            //Get total vacation days       
+
+            int vc = days / 5;
+
+            labelNumberVCDays.Content = $"Vacation Earned: {vc} Days";
+
         }
     }
 }
