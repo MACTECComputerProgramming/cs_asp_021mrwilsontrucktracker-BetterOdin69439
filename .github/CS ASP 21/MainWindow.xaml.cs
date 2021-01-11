@@ -66,7 +66,7 @@ namespace CS_ASP_21
 
             //Get Total Pay
 
-            double pay = (checkBoxRef.IsChecked == true) ? miles * .37 : miles * .27;
+            double pay = (checkBoxRef.IsChecked == true) ? miles * .37 : miles * .25;
 
             labelPayDue.Content = string.Format(" Pay Due: {0:c}", pay);
 
